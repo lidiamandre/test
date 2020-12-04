@@ -1,0 +1,14 @@
+Lambda<-function(X,k){
+  if(k>1){
+    X1<-X[1:k,]
+    X2<-t(X[1:k,])
+    grandsum<-sum(X1%*%X2)
+    return(grandsum)
+  }
+  else{
+    X1<-X[1,]
+    X2<-t(X[1,])
+    grandsum<-sum(X1%*%X2)
+    return(grandsum)
+  }
+}
